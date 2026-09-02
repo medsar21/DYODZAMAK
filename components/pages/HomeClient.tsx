@@ -344,7 +344,7 @@ export default function HomeClient() {
 
                 {/* 3. Gravure/Laser (Engraving details) */}
                 <g className={`svg-part svg-part--engrave ${activeTooltip === "engrave" ? "active" : ""}`}>
-                  <path d="M 130,120 L 190,120 L 200,200 L 160,230 L 120,200 Z" fill="rgba(7,17,26,0.8)" stroke="#fff" strokeWidth="1" opacity="0.8" />
+                  <path d="M 130,120 L 190,120 L 200,200 L 160,230 L 120,200 Z" fill="rgba(33,7,13,0.8)" stroke="#fff" strokeWidth="1" opacity="0.8" />
                   <path d="M 160,135 L 170,155 L 190,155 L 175,168 L 180,188 L 160,175 L 140,188 L 145,168 L 130,155 L 150,155 Z" fill="none" stroke="#e5bd77" strokeWidth="1.5" />
                   <line x1="140" y1="205" x2="180" y2="205" stroke="#fff" strokeWidth="1.5" opacity="0.9" />
                   <line x1="145" y1="215" x2="175" y2="215" stroke="#fff" strokeWidth="1" opacity="0.6" />
@@ -353,7 +353,7 @@ export default function HomeClient() {
                 {/* 4. Base & Socle */}
                 <g className={`svg-part svg-part--base ${activeTooltip === "base" ? "active" : ""}`}>
                   <path d="M 140,310 L 180,310 L 185,330 L 135,330 Z" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
-                  <path d="M 80,330 L 240,330 L 255,380 L 65,380 Z" fill="#0e1720" stroke="rgba(255,255,255,0.15)" strokeWidth="1.5" />
+                  <path d="M 80,330 L 240,330 L 255,380 L 65,380 Z" fill="#2a0a12" stroke="rgba(255,255,255,0.15)" strokeWidth="1.5" />
                   <rect x="105" y="348" width="110" height="20" rx="1.5" fill="url(#goldGrad)" />
                   <line x1="120" y1="358" x2="200" y2="358" stroke="#16120b" strokeWidth="2" opacity="0.8" />
                 </g>

@@ -231,7 +231,7 @@ export function ContactPageClient() {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#07111a]/25 via-transparent to-[#07111a]/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#21070d]/25 via-transparent to-[#21070d]/60" />
       </div>
 
       {/* Content overlay */}
@@ -249,19 +249,19 @@ export function ContactPageClient() {
           {/* Contact grid */}
           <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr]">
             <div className="grid gap-3">
-              <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noreferrer" className="group rounded-[24px] border border-white/20 bg-[#07111a]/85 backdrop-blur-md px-5 py-6 transition hover:border-[#e5bd77]/25 hover:bg-[#07111a]/95">
+              <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noreferrer" className="group rounded-[24px] border border-white/20 bg-[#21070d]/85 backdrop-blur-md px-5 py-6 transition hover:border-[#e5bd77]/25 hover:bg-[#21070d]/95">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#e5bd77]/50">{copy.contactWhatsApp}</p>
                 <p className="mt-3 text-2xl font-medium tracking-[-0.04em] text-white">{copy.contactWhatsApp}</p>
               </a>
-              <a href={`tel:${phoneDisplay.replace(/\s/g, "")}`} className="group rounded-[24px] border border-white/20 bg-[#07111a]/85 backdrop-blur-md px-5 py-6 transition hover:border-[#e5bd77]/25 hover:bg-[#07111a]/95">
+              <a href={`tel:${phoneDisplay.replace(/\s/g, "")}`} className="group rounded-[24px] border border-white/20 bg-[#21070d]/85 backdrop-blur-md px-5 py-6 transition hover:border-[#e5bd77]/25 hover:bg-[#21070d]/95">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#e5bd77]/50">{copy.contactPhone}</p>
                 <p className="mt-3 text-2xl font-medium tracking-[-0.04em] text-white">{phoneDisplay}</p>
               </a>
-              <a href={`mailto:${emailDisplay}`} className="group rounded-[24px] border border-white/20 bg-[#07111a]/85 backdrop-blur-md px-5 py-6 transition hover:border-[#e5bd77]/25 hover:bg-[#07111a]/95">
+              <a href={`mailto:${emailDisplay}`} className="group rounded-[24px] border border-white/20 bg-[#21070d]/85 backdrop-blur-md px-5 py-6 transition hover:border-[#e5bd77]/25 hover:bg-[#21070d]/95">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#e5bd77]/50">{copy.contactEmail}</p>
                 <p className="mt-3 text-2xl font-medium tracking-[-0.04em] text-white">{emailDisplay}</p>
               </a>
-              <div className="rounded-[24px] border border-white/20 bg-[#07111a]/85 backdrop-blur-md px-5 py-6">
+              <div className="rounded-[24px] border border-white/20 bg-[#21070d]/85 backdrop-blur-md px-5 py-6">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#e5bd77]/50">{copy.contactLocation}</p>
                 <p className="mt-3 text-2xl font-medium tracking-[-0.04em] text-white">{copy.contactCity}</p>
               </div>

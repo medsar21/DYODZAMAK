@@ -60,7 +60,7 @@ export default function QuoteForm({ compact = false, transparent = false }: { co
 
   const inputClass = `field ${
     transparent
-      ? "bg-[#07111a]/95 border-white/20 text-white placeholder-white/40 focus:border-[#e5bd77]/50 focus:bg-[#07111a]"
+      ? "bg-[#21070d]/95 border-white/20 text-white placeholder-white/40 focus:border-[#e5bd77]/50 focus:bg-[#21070d]"
       : ""
   }`;
 
@@ -69,7 +69,7 @@ export default function QuoteForm({ compact = false, transparent = false }: { co
       onSubmit={submit}
       className={`quote-form ${
         transparent
-          ? "border border-white/10 bg-[#07111a]/75 backdrop-blur-md p-5 md:p-8 rounded-[32px]"
+          ? "border border-white/10 bg-[#21070d]/75 backdrop-blur-md p-5 md:p-8 rounded-[32px]"
           : "section-surface rounded-[32px] p-5 md:p-8"
       } ${compact ? "grid gap-4" : "grid gap-4 md:grid-cols-2"}`}
       noValidate

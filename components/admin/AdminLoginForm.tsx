@@ -26,7 +26,7 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#07111a] px-4 py-10">
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#21070d] px-4 py-10">
       <div className="absolute -top-48 left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-[#e5bd77]/10 blur-3xl" />
       <div className="relative w-full max-w-md rounded-[28px] border border-white/10 bg-[#13212d] p-7 shadow-2xl md:p-9">
         <div className="mb-8 text-center">

@@ -191,12 +191,12 @@ export default function CategoryPage({
           onClick={() => setActiveItem(null)}
         >
           <div
-            className="product-modal relative w-full max-w-3xl max-h-[90vh] md:max-h-[85vh] overflow-y-auto rounded-[24px] border border-white/10 bg-[#0b1621] shadow-[0_45px_100px_rgba(0,0,0,0.8)] flex flex-col md:flex-row"
+            className="product-modal relative w-full max-w-3xl max-h-[90vh] md:max-h-[85vh] overflow-y-auto rounded-[24px] border border-white/10 bg-[#2a0a12] shadow-[0_45px_100px_rgba(0,0,0,0.8)] flex flex-col md:flex-row"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
             <button
-              className="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-[#07111a]/80 text-white/70 backdrop-blur-sm transition hover:bg-white/10 hover:text-white"
+              className="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-[#21070d]/80 text-white/70 backdrop-blur-sm transition hover:bg-white/10 hover:text-white"
               onClick={() => setActiveItem(null)}
               aria-label="Fermer"
             >
@@ -216,7 +216,7 @@ export default function CategoryPage({
                 />
               </div>
               <div className="absolute bottom-4 left-5">
-                <span className="rounded-full border border-[#e5bd77]/30 bg-[#07111a]/80 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-[#e5bd77]/80 backdrop-blur-sm">
+                <span className="rounded-full border border-[#e5bd77]/30 bg-[#21070d]/80 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-[#e5bd77]/80 backdrop-blur-sm">
                   {categoryName}
                 </span>
               </div>

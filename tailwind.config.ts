@@ -9,11 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#111111",
-        bronze: "#B87532",
-        gold: "#D8B56D",
-        beige: "#EFE3D2",
-        ivory: "#FAF7F2"
+        ink: "#21070D",
+        bronze: "#A36A2B",
+        gold: "#E3BB69",
+        beige: "#F3E5CD",
+        ivory: "#FFF9EF"
       },
       borderRadius: {
         xs: "8px",

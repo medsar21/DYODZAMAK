@@ -52,7 +52,7 @@ export default function Footer() {
     <footer className="px-4 pb-6 pt-16 md:px-6 md:pb-8 md:pt-20">
       <div className={`section-frame overflow-hidden rounded-[var(--radius-xl)] border border-white/10 px-6 py-10 md:px-10 md:py-12 ${
         isContactPage
-          ? "bg-[#0b1621]/30 backdrop-blur-md text-[#fffdf8]"
+          ? "bg-[#2a0a12]/30 backdrop-blur-md text-[#fffdf8]"
           : "section-dark"
       }`}>
         <div className="grid gap-10 grid-cols-1 md:grid-cols-3">

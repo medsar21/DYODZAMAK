@@ -17,7 +17,7 @@ export default function ProductCard({
   const viewLabel = lang === "fr" ? "Voir le produit" : lang === "ar" ? "عرض المنتج" : "View product";
 
   return (
-    <article className="product-card group flex h-full flex-col rounded-[24px] overflow-hidden border border-white/8 bg-[#0d1820] transition-all duration-300 hover:border-[#e5bd77]/25 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
+    <article className="product-card group flex h-full flex-col rounded-[24px] overflow-hidden border border-white/8 bg-[#2e0c14] transition-all duration-300 hover:border-[#e5bd77]/25 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
       <div className="relative overflow-hidden">
         <div className="relative aspect-square bg-white/5 p-3">
           <Image

@@ -93,7 +93,7 @@ export default function CatalogClient({ initialCategory = "all" }: { initialCate
         </div>
 
         {/* Horizontal Filters in a single row/line */}
-        <div className="section-surface rounded-[24px] border border-white/8 bg-[#0b1621]/45 backdrop-blur-md p-5 mb-10 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="section-surface rounded-[24px] border border-white/8 bg-[#2a0a12]/45 backdrop-blur-md p-5 mb-10 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {/* Category Selector */}
           <div>
             <label htmlFor="filter-category" className="block text-[10px] font-bold uppercase tracking-[0.14em] text-[#e5bd77]/60 mb-2">
@@ -103,7 +103,7 @@ export default function CatalogClient({ initialCategory = "all" }: { initialCate
               id="filter-category"
               value={filters.category}
               onChange={(e) => setFilters({ ...filters, category: e.target.value as any })}
-              className="w-full h-[46px] px-3.5 rounded-[12px] bg-[#07111a]/85 border border-white/10 text-xs font-semibold text-white/80 focus:border-[#e5bd77]/50 focus:bg-[#07111a] outline-none transition-colors"
+              className="w-full h-[46px] px-3.5 rounded-[12px] bg-[#21070d]/85 border border-white/10 text-xs font-semibold text-white/80 focus:border-[#e5bd77]/50 focus:bg-[#21070d] outline-none transition-colors"
             >
               <option value="all">{t.all} ({t.nav.catalog})</option>
               {categoryRoutes.map((slug) => (
@@ -121,7 +121,7 @@ export default function CatalogClient({ initialCategory = "all" }: { initialCate
               id="filter-finish"
               value={filters.finish}
               onChange={(e) => setFilters({ ...filters, finish: e.target.value as any })}
-              className="w-full h-[46px] px-3.5 rounded-[12px] bg-[#07111a]/85 border border-white/10 text-xs font-semibold text-white/80 focus:border-[#e5bd77]/50 focus:bg-[#07111a] outline-none transition-colors"
+              className="w-full h-[46px] px-3.5 rounded-[12px] bg-[#21070d]/85 border border-white/10 text-xs font-semibold text-white/80 focus:border-[#e5bd77]/50 focus:bg-[#21070d] outline-none transition-colors"
             >
               <option value="all">{t.all} ({copy.finish})</option>
               {finishes.map((finish) => (
@@ -139,7 +139,7 @@ export default function CatalogClient({ initialCategory = "all" }: { initialCate
               id="filter-usage"
               value={filters.usage}
               onChange={(e) => setFilters({ ...filters, usage: e.target.value as any })}
-              className="w-full h-[46px] px-3.5 rounded-[12px] bg-[#07111a]/85 border border-white/10 text-xs font-semibold text-white/80 focus:border-[#e5bd77]/50 focus:bg-[#07111a] outline-none transition-colors"
+              className="w-full h-[46px] px-3.5 rounded-[12px] bg-[#21070d]/85 border border-white/10 text-xs font-semibold text-white/80 focus:border-[#e5bd77]/50 focus:bg-[#21070d] outline-none transition-colors"
             >
               <option value="all">{t.all} ({copy.usage})</option>
               {usages.map((usage) => (
@@ -157,7 +157,7 @@ export default function CatalogClient({ initialCategory = "all" }: { initialCate
               id="filter-type"
               value={filters.type}
               onChange={(e) => setFilters({ ...filters, type: e.target.value as any })}
-              className="w-full h-[46px] px-3.5 rounded-[12px] bg-[#07111a]/85 border border-white/10 text-xs font-semibold text-white/80 focus:border-[#e5bd77]/50 focus:bg-[#07111a] outline-none transition-colors"
+              className="w-full h-[46px] px-3.5 rounded-[12px] bg-[#21070d]/85 border border-white/10 text-xs font-semibold text-white/80 focus:border-[#e5bd77]/50 focus:bg-[#21070d] outline-none transition-colors"
             >
               <option value="all">{t.all} ({copy.type})</option>
               {(["custom", "3d", "classic"] as const).map((type) => (

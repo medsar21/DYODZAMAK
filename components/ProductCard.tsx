@@ -45,7 +45,7 @@ export default function ProductCard({ product, compact = false }: { product: Pro
 
   return (
     <>
-      <article className="product-card group flex h-full flex-col rounded-[24px] overflow-hidden border border-white/8 bg-[#0d1820] transition-all duration-300 hover:border-[#e5bd77]/25 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
+      <article className="product-card group flex h-full flex-col rounded-[24px] overflow-hidden border border-white/8 bg-[#2e0c14] transition-all duration-300 hover:border-[#e5bd77]/25 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
         <button
           ref={triggerRef}
           type="button"
@@ -80,7 +80,7 @@ export default function ProductCard({ product, compact = false }: { product: Pro
             <button
               type="button"
               onClick={() => setOpen(true)}
-              className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/10 bg-white/5 text-white transition duration-300 group-hover:border-white/30 group-hover:bg-white group-hover:text-[#07111a]"
+              className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/10 bg-white/5 text-white transition duration-300 group-hover:border-white/30 group-hover:bg-white group-hover:text-[#21070d]"
               aria-label={t.quickView}
             >
               <ArrowUpRight size={15} />
@@ -108,12 +108,12 @@ export default function ProductCard({ product, compact = false }: { product: Pro
           onClick={closeModal}
         >
           <div
-            className="product-modal relative w-full max-w-3xl max-h-[90vh] md:max-h-[85vh] overflow-y-auto rounded-[24px] border border-white/10 bg-[#0b1621] shadow-[0_45px_100px_rgba(0,0,0,0.8)] flex flex-col md:flex-row"
+            className="product-modal relative w-full max-w-3xl max-h-[90vh] md:max-h-[85vh] overflow-y-auto rounded-[24px] border border-white/10 bg-[#2a0a12] shadow-[0_45px_100px_rgba(0,0,0,0.8)] flex flex-col md:flex-row"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
             <button
-              className="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-[#07111a]/80 text-white/70 backdrop-blur-sm transition hover:bg-white/10 hover:text-white"
+              className="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-[#21070d]/80 text-white/70 backdrop-blur-sm transition hover:bg-white/10 hover:text-white"
               onClick={closeModal}
               aria-label={closeLabel}
             >
@@ -134,7 +134,7 @@ export default function ProductCard({ product, compact = false }: { product: Pro
                 )}
               </div>
               <div className="absolute bottom-4 left-5">
-                <span className="rounded-full border border-[#e5bd77]/30 bg-[#07111a]/80 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-[#e5bd77]/80 backdrop-blur-sm">
+                <span className="rounded-full border border-[#e5bd77]/30 bg-[#21070d]/80 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-[#e5bd77]/80 backdrop-blur-sm">
                   {product.badge}
                 </span>
               </div>
