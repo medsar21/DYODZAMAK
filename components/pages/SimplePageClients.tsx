@@ -21,7 +21,7 @@ const simpleCopy = {
     quoteTitle: "La demande doit etre simple, rassurante et directement exploitable.",
     aboutStatements: ["Catalogue multi-categories", "Production sur devis", "Accompagnement maquette", "Livraison partout au Maroc"],
     aboutEyebrow: "Atelier",
-    aboutTitle: "DYODZAMAK se positionne comme un atelier de fabrication personnalisee, pas comme un simple catalogue.",
+    aboutTitle: "BEST BOUTONS se positionne comme un atelier de fabrication personnalisee, pas comme un simple catalogue.",
     aboutNext: "Passez de l'inspiration a une demande claire, rapide et bien cadree.",
     aboutSuite: "Suite",
     contactTitle: "Contact",
@@ -44,7 +44,7 @@ const simpleCopy = {
     quoteTitle: "يجب أن يكون الطلب بسيطاً، مطمئناً وقابلاً للاستعمال مباشرة.",
     aboutStatements: ["كتالوج متعدد الفئات", "إنتاج حسب الطلب", "مواكبة التصميم", "توصيل في جميع أنحاء المغرب"],
     aboutEyebrow: "ورشة",
-    aboutTitle: "DYODZAMAK ليست مجرد كتالوج، بل ورشة تصنيع مخصصة.",
+    aboutTitle: "BEST BOUTONS ليست مجرد كتالوج، بل ورشة تصنيع مخصصة.",
     aboutNext: "انتقل من الإلهام إلى طلب واضح وسريع ومضبوط.",
     aboutSuite: "متابعة",
     contactTitle: "اتصال",
@@ -67,7 +67,7 @@ const simpleCopy = {
     quoteTitle: "The request should be simple, reassuring and immediately usable.",
     aboutStatements: ["Multi-category catalog", "Quote-based production", "Mockup support", "Delivery across Morocco"],
     aboutEyebrow: "Workshop",
-    aboutTitle: "DYODZAMAK is a custom manufacturing workshop, not just a catalog.",
+    aboutTitle: "BEST BOUTONS is a custom manufacturing workshop, not just a catalog.",
     aboutNext: "Move from inspiration to a clear, fast and well-scoped request.",
     aboutSuite: "Next step",
     contactTitle: "Contact",
@@ -90,7 +90,7 @@ function PageIntro({ title, text, videoSrc }: { title: string; text: string; vid
       <div className="section-frame">
         <div className="grid gap-5 lg:grid-cols-[0.92fr_1.08fr]">
           <div className="section-surface rounded-[34px] p-6 md:p-8 lg:p-10">
-            <span className="eyebrow">DYODZAMAK</span>
+            <span className="eyebrow">BEST BOUTONS</span>
             <h1 className="mt-6 max-w-3xl text-5xl font-medium leading-[1.15] tracking-[-0.03em] text-white md:text-7xl">
               {title}
             </h1>
@@ -239,7 +239,7 @@ export function ContactPageClient() {
         <div className="section-frame">
           {/* Contact title */}
           <div className="mb-12 text-center">
-            <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.22em] text-[#e5bd77]/70 mb-4">DYODZAMAK</span>
+            <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.22em] text-[#e5bd77]/70 mb-4">BEST BOUTONS</span>
             <h1 className="text-5xl font-medium leading-[1.1] tracking-[-0.04em] text-white md:text-7xl lg:text-8xl">
               {copy.contactTitle}
             </h1>

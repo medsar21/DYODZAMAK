@@ -30,7 +30,7 @@ export default function AdminLoginPage() {
       <div className="absolute -top-48 left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-[#e5bd77]/10 blur-3xl" />
       <div className="relative w-full max-w-md rounded-[28px] border border-white/10 bg-[#13212d] p-7 shadow-2xl md:p-9">
         <div className="mb-8 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#e5bd77]">DYODZAMAK</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#e5bd77]">BEST BOUTONS</p>
           <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white">Administration</h1>
           <p className="mt-2 text-sm text-white/55">Connectez-vous pour gérer le contenu du site.</p>
         </div>
@@ -43,7 +43,7 @@ export default function AdminLoginPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full rounded-xl border border-white/10 bg-white/5 px-3.5 py-3 text-white outline-none transition placeholder:text-white/30 focus:border-[#e5bd77]/70 focus:ring-4 focus:ring-[#e5bd77]/10"
-              placeholder="admin@dyodzamak.ma"
+              placeholder="admin@bestboutons.ma"
               required
             />
           </div>

@@ -12,12 +12,12 @@ async function main() {
   // Admin user
   const adminPassword = await bcrypt.hash(process.env.ADMIN_PASSWORD || "admin123", 10);
   await prisma.adminUser.upsert({
-    where: { email: process.env.ADMIN_EMAIL || "admin@dyodzamak.ma" },
+    where: { email: process.env.ADMIN_EMAIL || "admin@bestboutons.ma" },
     update: {},
     create: {
-      email: process.env.ADMIN_EMAIL || "admin@dyodzamak.ma",
+      email: process.env.ADMIN_EMAIL || "admin@bestboutons.ma",
       password: adminPassword,
-      name: "Admin DYODZAMAK",
+      name: "Admin BEST BOUTONS",
       role: "admin",
     },
   });
@@ -25,13 +25,13 @@ async function main() {
 
   // Site settings
   const settings = [
-    { key: "whatsapp_number", value: "212XXXXXXXXX", group: "contact" },
-    { key: "phone_display", value: "+212 XX XX XX XX XX", group: "contact" },
-    { key: "email", value: "contact@dyodzamak.ma", group: "contact" },
+    { key: "whatsapp_number", value: "0661679774", group: "contact" },
+    { key: "phone_display", value: "+212 66 16 79 774", group: "contact" },
+    { key: "email", value: "contact@bestboutons.ma", group: "contact" },
     { key: "location_fr", value: "Maroc", group: "contact" },
     { key: "location_ar", value: "المغرب", group: "contact" },
     { key: "location_en", value: "Morocco", group: "contact" },
-    { key: "site_name", value: "DYODZAMAK", group: "general" },
+    { key: "site_name", value: "BEST BOUTONS", group: "general" },
   ];
   for (const s of settings) {
     await prisma.siteSetting.upsert({
@@ -425,14 +425,14 @@ async function main() {
   const pagesData = [
     {
       slug: "a-propos",
-      titleFr: "A propos de DYODZAMAK", titleAr: "من نحن", titleEn: "About DYODZAMAK",
+      titleFr: "A propos de BEST BOUTONS", titleAr: "من نحن", titleEn: "About BEST BOUTONS",
       subtitleFr: "Un atelier specialise dans les recompenses, plaques et creations metalliques personnalisees au Maroc.",
       subtitleAr: "كتالوج متخصص في الجوائز والمنتجات المعدنية المخصصة في المغرب.",
       subtitleEn: "A workshop specialized in awards, plaques and customized metal creations in Morocco.",
     },
     {
       slug: "catalogue",
-      titleFr: "Catalogue DYODZAMAK", titleAr: "كتالوج DYODZAMAK", titleEn: "DYODZAMAK Catalog",
+      titleFr: "Catalogue BEST BOUTONS", titleAr: "كتالوج BEST BOUTONS", titleEn: "BEST BOUTONS Catalog",
       subtitleFr: "Parcourez les modeles avec une presentation plus claire, des filtres utiles et un acces rapide au devis.",
       subtitleAr: "تصفح النماذج بتجربة واضحة: فلاتر، تشطيبات، استعمالات وطلب سريع.",
       subtitleEn: "Browse the models with clearer presentation, useful filters and fast access to quoting.",
