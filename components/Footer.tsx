@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LockKeyhole, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
-import { emailDisplay, phoneDisplay, whatsappNumber } from "@/data/site";
+import { emailDisplay, phoneDisplay, secondaryPhoneDisplay, whatsappNumber } from "@/data/site";
 import { useSettings } from "@/lib/hooks";
 
 const footerCopy = {
@@ -38,6 +38,7 @@ export default function Footer() {
   const contactSettings = (settings.contact || {}) as Record<string, string>;
   const wa = contactSettings.whatsapp_number || whatsappNumber;
   const ph = contactSettings.phone_display || phoneDisplay;
+  const secondaryPhone = contactSettings.phone_display_secondary || secondaryPhoneDisplay;
   const em = contactSettings.email || emailDisplay;
   const loc = contactSettings[`location_${lang}`] || copy.location;
 
@@ -53,7 +54,7 @@ export default function Footer() {
       <div className={`section-frame overflow-hidden rounded-[var(--radius-xl)] border border-white/10 px-6 py-10 md:px-10 md:py-12 ${
         isContactPage
           ? "bg-[#2a0a12]/30 backdrop-blur-md text-[#fffdf8]"
-          : "section-dark"
+          : "section-dark footer-brand"
       }`}>
         <div className="grid gap-10 grid-cols-1 md:grid-cols-3">
           {/* Produits column */}
@@ -93,11 +94,15 @@ export default function Footer() {
             <div className="mt-5 grid gap-4 text-sm font-medium text-[rgba(247,243,237,0.78)]">
               <a href={`https://wa.me/${wa}`} target="_blank" rel="noreferrer" className="flex items-center gap-3 transition hover:text-white">
                 <span className="grid h-10 w-10 place-items-center rounded-full border border-white/10"><MessageCircle size={16} /></span>
-                WhatsApp
+                WhatsApp · 0642581548
               </a>
               <a href={`tel:${ph.replace(/\s/g, "")}`} className="flex items-center gap-3 transition hover:text-white">
                 <span className="grid h-10 w-10 place-items-center rounded-full border border-white/10"><Phone size={16} /></span>
                 {ph}
+              </a>
+              <a href={`tel:${secondaryPhone.replace(/\s/g, "")}`} className="flex items-center gap-3 transition hover:text-white">
+                <span className="grid h-10 w-10 place-items-center rounded-full border border-white/10"><Phone size={16} /></span>
+                {secondaryPhone}
               </a>
               <a href={`mailto:${em}`} className="flex items-center gap-3 transition hover:text-white">
                 <span className="grid h-10 w-10 place-items-center rounded-full border border-white/10"><Mail size={16} /></span>

@@ -17,6 +17,21 @@
   --gold: #b88319;
   --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
   --shadow-medium: 0 20px 50px rgba(0, 0, 0, 0.1);
+  --brand: #591d3e;
+  --bg: var(--brand);
+  --surface: rgba(58, 16, 25, 0.72);
+  --surface-strong: rgba(69, 18, 30, 0.9);
+  --surface-dark: #18050a;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --text: #fffdf8;
+  --muted: rgba(255, 255, 255, 0.6);
+  --muted-strong: rgba(255, 255, 255, 0.8);
+  --accent: #e3bb69;
+  --accent-soft: rgba(227, 187, 105, 0.12);
+  --gold: #e3bb69;
+  --shadow-soft: 0 24px 70px rgba(0, 0, 0, 0.35);
+  --shadow-medium: 0 36px 100px rgba(0, 0, 0, 0.5);
   --radius-xs: 8px;
   --radius-sm: 14px;
   --radius-md: 24px;
@@ -149,6 +164,10 @@ a {
 
 .section-dark .eyebrow::before {
   background: rgba(247, 243, 237, 0.22);
+}
+
+.footer-brand {
+  background: linear-gradient(135deg, #591d3e, #42152f);
 }
 
 .hero-panel {
@@ -722,7 +741,7 @@ a {
 
 
 .button-primary {
-  background: linear-gradient(180deg, #6b1829, #3a0d18);
+  background: linear-gradient(180deg, #591d3e, #42152f);
   color: #fff9ef;
   box-shadow: 0 18px 44px rgba(33, 7, 13, 0.4);
 }

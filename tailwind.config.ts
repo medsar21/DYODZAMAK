@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#21070D",
+        ink: "#591D3E",
         bronze: "#A36A2B",
         gold: "#E3BB69",
         beige: "#F3E5CD",
