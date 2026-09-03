@@ -27,7 +27,7 @@ export default function QuoteForm({ compact = false, transparent = false }: { co
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const f = t.form;
-    const intro = lang === "fr" ? "DYODZAMAK - Demande de devis" : lang === "ar" ? "DYODZAMAK - طلب عرض سعر" : "DYODZAMAK - Quote request";
+    const intro = lang === "fr" ? "BEST BOUTONS - Demande de devis" : lang === "ar" ? "BEST BOUTONS - طلب عرض سعر" : "BEST BOUTONS - Quote request";
     const message = [
       intro,
       `${f.name}: ${form.name}`,

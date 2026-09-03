@@ -112,7 +112,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-5 text-xs font-medium uppercase tracking-[0.18em] text-[rgba(247,243,237,0.42)]">
-          © DYODZAMAK. {t.price}.
+          © BEST BOUTONS. {t.price}.
           <Link href="/admin/login" className="inline-flex items-center gap-2 transition hover:text-[#e5bd77]" aria-label="Accès à l'administration">
             <LockKeyhole size={13} />
             {lang === "fr" ? "Administration" : lang === "ar" ? "الإدارة" : "Administration"}

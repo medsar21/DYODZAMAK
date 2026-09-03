@@ -72,10 +72,10 @@ export default function Header() {
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex shrink-0 items-center gap-3">
             <div className="relative h-12 w-12 overflow-hidden rounded-[16px] border border-white/15 bg-white/95 shadow-[0_10px_24px_rgba(0,0,0,0.2)]">
-              <Image src="/images/logo.png" alt="DYODZAMAK logo" fill sizes="48px" className="object-contain p-2" />
+              <Image src="/images/logo.png" alt="BEST BOUTONS logo" fill sizes="48px" className="object-contain p-2" />
             </div>
             <div>
-              <span className="block text-[1.02rem] font-semibold tracking-[-0.05em] text-white md:text-[1.2rem]">DYODZAMAK</span>
+              <span className="block text-[1.02rem] font-semibold tracking-[-0.05em] text-white md:text-[1.2rem]">BEST BOUTONS</span>
               <span className="mt-1 block text-[0.62rem] uppercase tracking-[0.28em] text-white/50">{copy.atelier}</span>
             </div>
           </Link>
@@ -174,10 +174,10 @@ export default function Header() {
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-center gap-3">
                 <div className="relative h-14 w-14 overflow-hidden rounded-[18px] border border-white/15 bg-white shadow-[0_10px_24px_rgba(0,0,0,0.2)]">
-                  <Image src="/images/logo.png" alt="DYODZAMAK logo" fill sizes="56px" className="object-contain p-2" />
+                  <Image src="/images/logo.png" alt="BEST BOUTONS logo" fill sizes="56px" className="object-contain p-2" />
                 </div>
                 <div>
-                  <span className="block text-2xl font-semibold tracking-[-0.05em] text-white">DYODZAMAK</span>
+                  <span className="block text-2xl font-semibold tracking-[-0.05em] text-white">BEST BOUTONS</span>
                   <span className="mt-2 block text-[0.65rem] uppercase tracking-[0.24em] text-white/50">{copy.metal}</span>
                 </div>
               </div>

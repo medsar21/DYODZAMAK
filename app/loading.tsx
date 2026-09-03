@@ -8,14 +8,14 @@ export default function Loading() {
         <div className="loading-screen__logo-wrap">
           <Image
             src="/images/logo.png"
-            alt="DYODZAMAK logo"
+            alt="BEST BOUTONS logo"
             fill
             priority
             sizes="140px"
             className="object-contain"
           />
         </div>
-        <p className="loading-screen__brand">DYODZAMAK</p>
+        <p className="loading-screen__brand">BEST BOUTONS</p>
         <p className="loading-screen__subtitle">Preparation de votre experience</p>
         <div className="loading-screen__bar">
           <span className="loading-screen__bar-fill" />

@@ -23,7 +23,7 @@ export default function GalleryClient({ preview = false }: { preview?: boolean }
               <button type="button" onClick={() => setActive(index)} className="premium-card group w-full overflow-hidden text-start">
                 <div className={`grid aspect-[1.18] place-items-center bg-gradient-to-br ${item.tone} p-6 text-ivory`}>
                   <div className="grid h-28 w-28 place-items-center border border-white/30 bg-ink/40 text-center text-sm font-black uppercase shadow-premium">
-                    DYODZAMAK
+                    BEST BOUTONS
                   </div>
                 </div>
                 <div className="p-5">
@@ -40,7 +40,7 @@ export default function GalleryClient({ preview = false }: { preview?: boolean }
         <div className="fixed inset-0 z-[70] grid place-items-center bg-ink/82 p-4 backdrop-blur-sm" role="dialog" aria-modal="true">
           <div className="w-full max-w-3xl overflow-hidden bg-ivory shadow-premium">
             <div className={`grid aspect-[1.9] place-items-center bg-gradient-to-br ${activeItem.tone} text-ivory`}>
-              <div className="grid h-36 w-36 place-items-center border border-white/30 bg-ink/45 text-center font-black">DYODZAMAK</div>
+              <div className="grid h-36 w-36 place-items-center border border-white/30 bg-ink/45 text-center font-black">BEST BOUTONS</div>
             </div>
             <div className="flex flex-col gap-4 p-6 md:flex-row md:items-center md:justify-between">
               <div>

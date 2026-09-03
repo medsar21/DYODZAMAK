@@ -34,7 +34,7 @@ function AdminSidebar() {
   return (
     <aside className={`sticky top-0 flex h-screen shrink-0 flex-col bg-slate-950 text-white transition-all ${collapsed ? "w-[76px]" : "w-64"}`}>
       <div className="flex items-center justify-between border-b border-white/10 p-4">
-        {!collapsed && <span className="font-bold tracking-wide">DYODZAMAK</span>}
+        {!collapsed && <span className="font-bold tracking-wide">BEST BOUTONS</span>}
         <button onClick={() => setCollapsed((value) => !value)} className="rounded p-1 text-slate-400 hover:bg-white/10 hover:text-white" aria-label="Toggle sidebar">
           {collapsed ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}
         </button>

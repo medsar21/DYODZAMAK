@@ -17,7 +17,7 @@ export default function AdminDashboard() {
     <AdminLayout>
       <section className="mx-auto max-w-7xl">
         <div className="mb-8 rounded-3xl bg-slate-950 px-6 py-8 text-white shadow-xl sm:px-8">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-[0.18em] text-amber-300">DYODZAMAK · Administration</p>
+          <p className="mb-2 text-sm font-semibold uppercase tracking-[0.18em] text-amber-300">BEST BOUTONS · Administration</p>
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Tableau de bord</h1>
           <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300 sm:text-base">Gérez les produits, le contenu et les demandes clients depuis un seul espace.</p>
         </div>

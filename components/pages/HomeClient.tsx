@@ -51,7 +51,7 @@ const copy = {
       ["02", "Nous preparons la maquette", "Nous concevons un visuel clair avant de lancer la production."],
       ["03", "Nous fabriquons et livrons", "Nous realisons la piece avec la finition choisie et nous la livrons."]
     ] as Array<[string, string, string]>,
-    finalEyebrow: "DYODZAMAK",
+    finalEyebrow: "BEST BOUTONS",
     finalTitle: "Pret a creer une recompense qui eleve la valeur de votre succes ?",
     finalText: "Envoyez les details essentiels, et nous vous proposerons le modele et la finition adaptes.",
     finalCta: "Demander un devis"
@@ -86,7 +86,7 @@ const copy = {
       ["02", "نصمم المعاينة", "نجهز لك تصميماً واضحاً قبل بدء الإنتاج."],
       ["03", "نصنع ونُسلّم", "ننّفذ القطعة بالتشطيب الذي اخترته ونوصلها إليك."]
     ] as Array<[string, string, string]>,
-    finalEyebrow: "DYODZAMAK",
+    finalEyebrow: "BEST BOUTONS",
     finalTitle: "هل أنت مستعد لصناعة جائزة ترفع قيمة الإنجاز؟",
     finalText: "أرسل التفاصيل الأساسية، وسنقترح عليك النموذج والتشطيب المناسبين.",
     finalCta: "اطلب عرض السعر"
@@ -121,7 +121,7 @@ const copy = {
       ["02", "We prepare the mockup", "We create a clear design before production starts."],
       ["03", "We produce and deliver", "We make the piece with the finish you chose and deliver it to you."]
     ] as Array<[string, string, string]>,
-    finalEyebrow: "DYODZAMAK",
+    finalEyebrow: "BEST BOUTONS",
     finalTitle: "Ready to create an award that elevates the value of your success?",
     finalText: "Send the essential details and we will suggest the right model and finish.",
     finalCta: "Request a quote"

@@ -3,9 +3,9 @@ export type CategorySlug = "medailles" | "trophees" | "trophees-3d" | "plaques" 
 export type Finish = "bronze" | "gold" | "silver" | "black";
 export type Usage = "sport" | "corporate" | "event" | "school" | "association";
 
-export const whatsappNumber = "212XXXXXXXXX";
-export const phoneDisplay = "+212 XX XX XX XX XX";
-export const emailDisplay = "contact@dyodzamak.ma";
+export const whatsappNumber = "0661679774";
+export const phoneDisplay = "+212 66 16 79 774";
+export const emailDisplay = "contact@bestboutons.ma";
 
 const img = {
   medal: "/images/WhatsApp Image 2026-06-03 at 13.38.31.jpeg",
@@ -79,7 +79,7 @@ export const ui = {
       association: "Association"
     },
     home: {
-      title: "DYODZAMAK",
+      title: "BEST BOUTONS",
       subtitle: "Catalogue premium de medailles, trophees, plaques, pins et porte-cles personnalises",
       intro: "Des produits metalliques sur mesure pour entreprises, clubs, ecoles, associations et evenements au Maroc.",
       bannerTitle: "Produits personnalises, finitions premium, prix sur devis",
@@ -97,10 +97,10 @@ export const ui = {
     trust: ["Maquette avant production", "Finitions bronze, doree, argentee et noir metal", "Livraison partout au Maroc", "Commande via WhatsApp"],
     steps: ["Choisir un produit", "Envoyer logo, texte et quantite", "Recevoir le devis", "Valider la maquette", "Production et livraison"],
     pages: {
-      catalog: ["Catalogue DYODZAMAK", "Parcourez les modeles avec une presentation plus claire, des filtres utiles et un acces rapide au devis."],
+      catalog: ["Catalogue BEST BOUTONS", "Parcourez les modeles avec une presentation plus claire, des filtres utiles et un acces rapide au devis."],
       customization: ["Personnalisation", "Logos, textes, dates, formes, quantites et finitions: chaque piece est preparee selon votre besoin reel."],
       quote: ["Demande de devis", "Renseignez les details essentiels pour recevoir une reponse plus rapide et mieux cadree."],
-      about: ["A propos de DYODZAMAK", "Un atelier specialise dans les recompenses, plaques et creations metalliques personnalisees au Maroc."],
+      about: ["A propos de BEST BOUTONS", "Un atelier specialise dans les recompenses, plaques et creations metalliques personnalisees au Maroc."],
       contact: ["Contact", "WhatsApp reste le canal le plus rapide pour demander un prix, envoyer un logo ou suivre un projet."]
     },
     form: {
@@ -162,7 +162,7 @@ export const ui = {
       association: "جمعيات"
     },
     home: {
-      title: "DYODZAMAK",
+      title: "BEST BOUTONS",
       subtitle: "كتالوج راق للميداليات والكؤوس واللوحات والدبابيس وحاملات المفاتيح المخصصة",
       intro: "منتجات معدنية حسب الطلب للشركات والنوادي والمدارس والجمعيات والمناسبات في المغرب.",
       bannerTitle: "منتجات مخصصة، تشطيبات راقية، السعر حسب الطلب",
@@ -180,7 +180,7 @@ export const ui = {
     trust: ["تصميم قبل الإنتاج", "تشطيبات برونزية وذهبية وفضية وسوداء", "التوصيل في المغرب", "الطلب عبر واتساب"],
     steps: ["اختيار المنتج", "إرسال الشعار والنص والكمية", "استلام عرض السعر", "تأكيد التصميم", "الإنتاج والتوصيل"],
     pages: {
-      catalog: ["كتالوج DYODZAMAK", "تصفح النماذج بتجربة واضحة: فلاتر، تشطيبات، استعمالات وطلب سريع."],
+      catalog: ["كتالوج BEST BOUTONS", "تصفح النماذج بتجربة واضحة: فلاتر، تشطيبات، استعمالات وطلب سريع."],
       customization: ["التخصيص", "الشعارات، النصوص، التواريخ، الأشكال، الكميات والتشطيبات حسب حاجتك."],
       quote: ["طلب عرض سعر", "املأ التفاصيل الأساسية وأرسل طلبا جاهزا عبر واتساب."],
       about: ["من نحن", "كتالوج متخصص في الجوائز والمنتجات المعدنية المخصصة في المغرب."],
@@ -245,7 +245,7 @@ export const ui = {
       association: "Association"
     },
     home: {
-      title: "DYODZAMAK",
+      title: "BEST BOUTONS",
       subtitle: "Premium catalog of custom medals, trophies, plaques, pins and keychains",
       intro: "Tailor-made metal products for companies, clubs, schools, associations and events in Morocco.",
       bannerTitle: "Custom products, premium finishes, quote-based pricing",
@@ -263,10 +263,10 @@ export const ui = {
     trust: ["Mockup before production", "Bronze, gold, silver and black metal finishes", "Delivery across Morocco", "Order via WhatsApp"],
     steps: ["Choose a product", "Send logo, text and quantity", "Receive the quote", "Approve the mockup", "Production and delivery"],
     pages: {
-      catalog: ["DYODZAMAK Catalog", "Browse the models with clearer presentation, useful filters and fast access to quoting."],
+      catalog: ["BEST BOUTONS Catalog", "Browse the models with clearer presentation, useful filters and fast access to quoting."],
       customization: ["Customization", "Logos, text, dates, shapes, quantities and finishes: every piece is prepared for your real needs."],
       quote: ["Quote request", "Enter the essential details to receive a faster and better-scoped response."],
-      about: ["About DYODZAMAK", "A workshop specialized in awards, plaques and customized metal creations in Morocco."],
+      about: ["About BEST BOUTONS", "A workshop specialized in awards, plaques and customized metal creations in Morocco."],
       contact: ["Contact", "WhatsApp remains the fastest channel to request a price, send a logo or follow a project."]
     },
     form: {
@@ -653,9 +653,9 @@ export const gallery = products.map((product, index) => ({
 export function productWhatsAppMessage(productName: string, lang: Lang) {
   const text =
     lang === "fr"
-      ? `Bonjour DYODZAMAK, je souhaite un devis pour: ${productName}. Merci de me contacter.`
+      ? `Bonjour BEST BOUTONS, je souhaite un devis pour: ${productName}. Merci de me contacter.`
       : lang === "ar"
-        ? `مرحبا DYODZAMAK، أريد عرض سعر لهذا المنتج: ${productName}. المرجو التواصل معي.`
-        : `Hello DYODZAMAK, I would like a quote for this product: ${productName}. Please contact me.`;
+        ? `مرحبا BEST BOUTONS، أريد عرض سعر لهذا المنتج: ${productName}. المرجو التواصل معي.`
+        : `Hello BEST BOUTONS, I would like a quote for this product: ${productName}. Please contact me.`;
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
 }

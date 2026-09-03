@@ -21,7 +21,7 @@ export default function PageHero({
       <Image src="/images/hero-awards.png" alt="" fill priority className="hero-image-mask object-cover object-center opacity-25" />
       <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/55 to-ink" />
       <FadeIn className="relative z-10 mx-auto max-w-7xl">
-        <span className="mb-5 inline-flex text-sm font-black uppercase text-gold">DYODZAMAK</span>
+        <span className="mb-5 inline-flex text-sm font-black uppercase text-gold">BEST BOUTONS</span>
         <h1 className="metal-text max-w-4xl text-5xl font-black leading-none md:text-7xl">{title}</h1>
         <p className="mt-6 max-w-3xl text-xl leading-8 text-ivory/76 md:text-2xl">{subtitle}</p>
         {!compact && (
