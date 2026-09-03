@@ -70,13 +70,9 @@ export default function Header() {
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 md:px-6">
       <div className="glass-nav shell-container rounded-[30px] px-4 py-3 md:px-6 md:py-4">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="flex shrink-0 items-center gap-3">
-            <div className="relative h-12 w-12 overflow-hidden rounded-[16px] border border-white/15 bg-white/95 shadow-[0_10px_24px_rgba(0,0,0,0.2)]">
-              <Image src="/images/logo.png" alt="BEST BOUTONS logo" fill sizes="48px" className="object-contain p-2" />
-            </div>
-            <div>
-              <span className="block text-[1.02rem] font-semibold tracking-[-0.05em] text-white md:text-[1.2rem]">BEST BOUTONS</span>
-              <span className="mt-1 block text-[0.62rem] uppercase tracking-[0.28em] text-white/50">{copy.atelier}</span>
+          <Link href="/" className="flex shrink-0 items-center">
+            <div className="relative h-12 w-36 overflow-hidden">
+              <Image src="/images/logo.png" alt="Logo" fill sizes="144px" className="object-contain object-left" priority />
             </div>
           </Link>
 
@@ -172,13 +168,9 @@ export default function Header() {
             onClick={(event) => event.stopPropagation()}
           >
             <div className="flex items-start justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <div className="relative h-14 w-14 overflow-hidden rounded-[18px] border border-white/15 bg-white shadow-[0_10px_24px_rgba(0,0,0,0.2)]">
-                  <Image src="/images/logo.png" alt="BEST BOUTONS logo" fill sizes="56px" className="object-contain p-2" />
-                </div>
-                <div>
-                  <span className="block text-2xl font-semibold tracking-[-0.05em] text-white">BEST BOUTONS</span>
-                  <span className="mt-2 block text-[0.65rem] uppercase tracking-[0.24em] text-white/50">{copy.metal}</span>
+              <div className="flex items-center">
+                <div className="relative h-14 w-40 overflow-hidden">
+                  <Image src="/images/logo.png" alt="Logo" fill sizes="160px" className="object-contain object-left" priority />
                 </div>
               </div>
               <button
