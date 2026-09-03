@@ -25,6 +25,8 @@ services:
       - "3000:3000"
     env_file:
       - .env
+    environment:
+      DATABASE_URL: postgresql://dyodzamak:dyodzamak@db:5432/dyodzamak
     depends_on:
       db:
         condition: service_healthy
@@ -38,6 +40,8 @@ services:
     command: ["npx", "tsx", "prisma/seed.ts"]
     env_file:
       - .env
+    environment:
+      DATABASE_URL: postgresql://dyodzamak:dyodzamak@db:5432/dyodzamak
     depends_on:
       db:
         condition: service_healthy
