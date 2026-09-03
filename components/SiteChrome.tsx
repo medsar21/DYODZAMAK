@@ -14,10 +14,9 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
   if (isAdminArea) return <>{children}</>;
 
   return (
-    <div dir={isRtl ? "rtl" : "ltr"} className={`page-shell text-[#111111]${isLanding ? " landing-shell" : ""}`}>
-      <div className="site-grid" />
+    <div dir={isRtl ? "rtl" : "ltr"} className="page-shell bg-white text-[#111111]">
       <Header />
-      <main className={`relative z-10 pb-8${isLanding ? "" : " pt-[104px] md:pt-[116px]"}`}>{children}</main>
+      <main className={`relative z-10 bg-white text-[#111111] pb-8${isLanding ? "" : " pt-[104px] md:pt-[116px]"}`}>{children}</main>
       <Footer />
     </div>
   );

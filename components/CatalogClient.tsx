@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import ProductGrid from "@/components/ProductGrid";
-import { CategorySlug, Finish, Usage, Product, categories, categoryRoutes } from "@/data/site";
+import { CategorySlug, Finish, Usage, Product, categories, categoryRoutes, products as staticProducts } from "@/data/site";
 import { useLanguage } from "@/components/LanguageProvider";
 import { usePublicProducts } from "@/lib/hooks";
 
@@ -23,33 +23,50 @@ const catalogCopy = {
 } as const;
 
 function mapApiProduct(raw: Record<string, unknown>): Product {
-  const cat = raw.category as Record<string, unknown> | undefined;
+  const cat = raw.category;
+  let categorySlug: CategorySlug = "medailles";
+  if (typeof cat === "string") {
+    categorySlug = cat as CategorySlug;
+  } else if (cat && typeof cat === "object" && "slug" in cat) {
+    categorySlug = (cat as { slug: string }).slug as CategorySlug;
+  } else if (typeof raw.categorySlug === "string") {
+    categorySlug = raw.categorySlug as CategorySlug;
+  }
+
+  const rawFr = (raw.fr ?? {}) as Record<string, unknown>;
+  const rawAr = (raw.ar ?? {}) as Record<string, unknown>;
+  const rawEn = (raw.en ?? {}) as Record<string, unknown>;
+
+  const nameFr = String(raw.nameFr ?? rawFr.name ?? "");
+  const nameAr = String(raw.nameAr ?? rawAr.name ?? "");
+  const nameEn = String(raw.nameEn ?? rawEn.name ?? "");
+
   return {
-    id: String(raw.id),
-    category: (cat?.slug as CategorySlug) ?? "medailles",
+    id: String(raw.id ?? Math.random()),
+    category: categorySlug,
     badge: String(raw.badge ?? ""),
     image: String(raw.image ?? "") + (raw.updatedAt ? `?v=${new Date(raw.updatedAt as string).getTime()}` : ""),
     finishes: (raw.finishes as Finish[]) ?? [],
     usage: (raw.usage as Usage[]) ?? [],
-    customizable: Boolean(raw.customizable),
+    customizable: Boolean(raw.customizable ?? true),
     is3d: Boolean(raw.is3d),
     featured: Boolean(raw.featured),
     newest: Boolean(raw.newest),
     premium: Boolean(raw.premium),
     fr: {
-      name: String(raw.nameFr ?? ""),
-      specs: Array.isArray(raw.specsFr) ? (raw.specsFr as string[]) : [],
-      description: String(raw.descFr ?? ""),
+      name: nameFr,
+      specs: Array.isArray(raw.specsFr) ? (raw.specsFr as string[]) : Array.isArray(rawFr.specs) ? (rawFr.specs as string[]) : [],
+      description: String(raw.descFr ?? rawFr.description ?? ""),
     },
     ar: {
-      name: String(raw.nameAr ?? ""),
-      specs: Array.isArray(raw.specsAr) ? (raw.specsAr as string[]) : [],
-      description: String(raw.descAr ?? ""),
+      name: nameAr,
+      specs: Array.isArray(raw.specsAr) ? (raw.specsAr as string[]) : Array.isArray(rawAr.specs) ? (rawAr.specs as string[]) : [],
+      description: String(raw.descAr ?? rawAr.description ?? ""),
     },
     en: {
-      name: String(raw.nameEn ?? ""),
-      specs: Array.isArray(raw.specsEn) ? (raw.specsEn as string[]) : [],
-      description: String(raw.descEn ?? ""),
+      name: nameEn,
+      specs: Array.isArray(raw.specsEn) ? (raw.specsEn as string[]) : Array.isArray(rawEn.specs) ? (rawEn.specs as string[]) : [],
+      description: String(raw.descEn ?? rawEn.description ?? ""),
     },
   };
 }
@@ -61,7 +78,13 @@ export default function CatalogClient({ initialCategory = "all" }: { initialCate
   const { products: apiProducts } = usePublicProducts();
 
   const allProducts = useMemo(() => {
-    return Array.isArray(apiProducts) ? apiProducts.map(mapApiProduct) : [];
+    if (Array.isArray(apiProducts) && apiProducts.length > 0) {
+      const mapped = apiProducts.map(mapApiProduct);
+      if (mapped.some((p) => p.fr.name || p.ar.name || p.en.name)) {
+        return mapped;
+      }
+    }
+    return staticProducts;
   }, [apiProducts]);
 
   const visible = useMemo(() => {

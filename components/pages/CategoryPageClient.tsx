@@ -3,38 +3,55 @@
 import Link from "next/link";
 import { useMemo } from "react";
 import ProductGrid from "@/components/ProductGrid";
-import { CategorySlug, Product, categories } from "@/data/site";
+import { CategorySlug, Product, categories, products as staticProducts } from "@/data/site";
 import { useLanguage } from "@/components/LanguageProvider";
 import { usePublicProducts } from "@/lib/hooks";
 
 function mapApiProduct(raw: Record<string, unknown>): Product {
-  const cat = raw.category as Record<string, unknown> | undefined;
+  const cat = raw.category;
+  let categorySlug: CategorySlug = "medailles";
+  if (typeof cat === "string") {
+    categorySlug = cat as CategorySlug;
+  } else if (cat && typeof cat === "object" && "slug" in cat) {
+    categorySlug = (cat as { slug: string }).slug as CategorySlug;
+  } else if (typeof raw.categorySlug === "string") {
+    categorySlug = raw.categorySlug as CategorySlug;
+  }
+
+  const rawFr = (raw.fr ?? {}) as Record<string, unknown>;
+  const rawAr = (raw.ar ?? {}) as Record<string, unknown>;
+  const rawEn = (raw.en ?? {}) as Record<string, unknown>;
+
+  const nameFr = String(raw.nameFr ?? rawFr.name ?? "");
+  const nameAr = String(raw.nameAr ?? rawAr.name ?? "");
+  const nameEn = String(raw.nameEn ?? rawEn.name ?? "");
+
   return {
-    id: String(raw.id),
-    category: (cat?.slug as CategorySlug) ?? "medailles",
+    id: String(raw.id ?? Math.random()),
+    category: categorySlug,
     badge: String(raw.badge ?? ""),
     image: String(raw.image ?? "") + (raw.updatedAt ? `?v=${new Date(raw.updatedAt as string).getTime()}` : ""),
     finishes: (raw.finishes as Product["finishes"]) ?? [],
     usage: (raw.usage as Product["usage"]) ?? [],
-    customizable: Boolean(raw.customizable),
+    customizable: Boolean(raw.customizable ?? true),
     is3d: Boolean(raw.is3d),
     featured: Boolean(raw.featured),
     newest: Boolean(raw.newest),
     premium: Boolean(raw.premium),
     fr: {
-      name: String(raw.nameFr ?? ""),
-      specs: Array.isArray(raw.specsFr) ? (raw.specsFr as string[]) : [],
-      description: String(raw.descFr ?? ""),
+      name: nameFr,
+      specs: Array.isArray(raw.specsFr) ? (raw.specsFr as string[]) : Array.isArray(rawFr.specs) ? (rawFr.specs as string[]) : [],
+      description: String(raw.descFr ?? rawFr.description ?? ""),
     },
     ar: {
-      name: String(raw.nameAr ?? ""),
-      specs: Array.isArray(raw.specsAr) ? (raw.specsAr as string[]) : [],
-      description: String(raw.descAr ?? ""),
+      name: nameAr,
+      specs: Array.isArray(raw.specsAr) ? (raw.specsAr as string[]) : Array.isArray(rawAr.specs) ? (rawAr.specs as string[]) : [],
+      description: String(raw.descAr ?? rawAr.description ?? ""),
     },
     en: {
-      name: String(raw.nameEn ?? ""),
-      specs: Array.isArray(raw.specsEn) ? (raw.specsEn as string[]) : [],
-      description: String(raw.descEn ?? ""),
+      name: nameEn,
+      specs: Array.isArray(raw.specsEn) ? (raw.specsEn as string[]) : Array.isArray(rawEn.specs) ? (rawEn.specs as string[]) : [],
+      description: String(raw.descEn ?? rawEn.description ?? ""),
     },
   };
 }
@@ -46,8 +63,13 @@ export default function CategoryPageClient({ slug }: { slug: CategorySlug }) {
   const { products: apiProducts } = usePublicProducts(slug);
 
   const categoryProducts = useMemo(() => {
-    return Array.isArray(apiProducts) ? apiProducts.map(mapApiProduct) : [];
-  }, [apiProducts]);
+    if (Array.isArray(apiProducts) && apiProducts.length > 0) {
+      const mapped = apiProducts.map(mapApiProduct);
+      const filtered = mapped.filter((p) => p.category === slug);
+      if (filtered.length > 0) return filtered;
+    }
+    return staticProducts.filter((p) => p.category === slug);
+  }, [apiProducts, slug]);
 
   return (
     <div className="px-4 pb-16 pt-24 md:px-6 md:pb-24 md:pt-32">
