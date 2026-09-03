@@ -22,3 +22,4 @@ Thumbs.db
 tsconfig.tsbuildinfo
 
 public/uploads/
+.postgres/
